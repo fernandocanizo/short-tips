@@ -1,0 +1,9 @@
+# Convert video to animated gif
+
+```
+mplayer -ao null <video file name> -vo jpeg:outdir=output
+
+convert output/* output.gif
+
+convert output.gif -fuzz 10% -layers Optimize optimised.gif
+```
