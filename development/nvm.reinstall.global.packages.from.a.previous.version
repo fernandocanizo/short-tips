@@ -1,0 +1,3 @@
+# `nvm` - Reinstall global packages from a previous version
+
+nvm install v6.9.2 --reinstall-packages-from=v4.4.5
