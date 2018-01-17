@@ -1,0 +1,5 @@
+# Find orphans
+
+```
+pacman -Qdt
+```
