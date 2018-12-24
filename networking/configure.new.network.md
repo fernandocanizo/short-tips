@@ -1,3 +1,3 @@
-# Configuer new network
+# Configure new network
 
 Use `wifi-menu`
