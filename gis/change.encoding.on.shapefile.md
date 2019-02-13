@@ -24,3 +24,16 @@ to be openable with other programs.
 To change the encoding of a DBF open it with OpenOffice Calc, choose `SaveAs`
 click the `Filter options` in the bottom left and press save. You can then
 define the encoding to convert the text contents into.
+
+## Update 2019-02-13
+
+From https://gis.stackexchange.com/questions/44057/how-did-qgis-fix-a-shapefiles-character-encoding-and-can-i-do-this-on-the-comm
+
+## My manual fix
+
+1. Open .DBF file with OpenOffice
+2. Save as .CSV
+3. Use `iconv -f ISO88591 -t UTF8` to convert CSV file
+4. Load **this** file with OpenOffice
+5. Save CSV as DBF
+
