@@ -28,3 +28,15 @@ Another one:
 ```
 git cherry -v --abbrev branch-to-compare-this-one-to
 ```
+
+Diff between two branches from common ancestor commit
+
+```
+git diff branch-1...branch-2
+```
+
+Compare files between branches
+
+```
+git diff branch-1:file branch-2:file
+```
