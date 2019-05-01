@@ -1,8 +1,8 @@
 # Create and apply a patch
 
-Usually you'll get a patch for each commit, but if you want to get them all in
-a single patch, then create a new branch to make the changes you want in your
-patch.
+Usually you'll get a patch for each commit, but if you want to get them all
+in a single patch, then create a new branch to make the changes you want in
+your patch.
 
 So:
 
@@ -26,4 +26,18 @@ git apply --check changes.patch
 
 # finally, apply it
 git am < changes.patch
+```
+
+If you already have the changes for the patch commited:
+
+```
+git format-patch HEAD~
+```
+
+You can use a different range to include more commits.
+
+Then apply, in nother repo, all patches found in folder:
+
+```
+git am *.patch
 ```
