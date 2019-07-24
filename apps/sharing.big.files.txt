@@ -1,0 +1,3 @@
+# Ways to share big files
+
+https://github.com/warner/magic-wormhole
