@@ -8,7 +8,11 @@ update schema.table
   where not ST_IsValid(geom);
 ```
 
-But if it's a Multipolygon it can need:
+But if it's a Multipolygon it may say:
+```
+ERROR: Geometry type (GeometryCollection) does not match column type (MultiPolygon)
+```
+Fixable with:
 
 ```
 update schema.table
