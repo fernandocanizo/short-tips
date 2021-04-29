@@ -1,0 +1,9 @@
+select v.ogc_fid from datasources.r05_2013_valparaiso_4 v join datasources.test_polygon_2 t on st_intersects(v.geom, t.geom)
+
+
+st_intersects it's a Boolean
+st_intersection gives the polygon that intersects, but I think I won't need it,
+the thing that Seba was asking was the fields from the things that intersect, so
+it's just getting the ids and then getting the info
+
+

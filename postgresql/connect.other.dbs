@@ -1,0 +1,13 @@
+create extension postgres_fdw
+
+create server if not exists local_eecc foreign data wrapper postgres_fdw options (host 'localhost', dbname 'eecc', port '5432');
+
+-- Note: create a read-only user for this, so it doesn't have insert/update
+-- permissions
+create user mapping if not exists for current_user server local_eecc options (user 'postgres', password '');
+
+create schema eecc;
+
+import foreign schema public from server local_eecc into eecc;
+
+
