@@ -11,3 +11,13 @@ Spencer Bliven @sbliven 12:06
 @fernandocanizo array-style aliases have to have the arguments pre-split. So in your case ls is getting a single argument like ls "--color=always --filetype ..." which of course isn't a valid color. You have to split the options up: aliases['ls'] = ['ls']+$LS_OPTIONS.split()+['-l']
 This does splitting when the profile is read. If you want to change LS_OPTIONS during a run then use a function: aliases['ls'] = lambda args: ![ls @($LS_OPTIONS.split()) -l @(args)]
 ```
+
+Another one that looks simpler:
+```
+Andy Kipp @anki-code Sep 03 12:19
+You can use shorter ExecAlias as well:
+
+$LS_OPTIONS = '-l -a'
+aliases['ls'] = "ls @($LS_OPTIONS.split()) @($args)"
+ls
+```
