@@ -84,6 +84,22 @@ Remove a branch:
 svn delete <branch-url>
 ```
 
+### Merging a branch sequence
+
+Assuming you are currently on your branch:
+
+```
+# bring in possible changes from other people
+svn merge <trunk-url>
+# won't commit anything if there were no changes
+svn commit
+svn switch <trunk-url>
+# bring into trunk changes made on the branch
+svn merge --reintegrate <branch-url>
+svn commit
+svn delete <branch-url>
+
+```
 ## Configuration
 
 See configuration
