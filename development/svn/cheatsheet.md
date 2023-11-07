@@ -21,6 +21,14 @@ svn status
 svn log | bat
 ```
 
+See logs including commits from merged in branches (when you merge a branch into `trunk`, your commits get squashed and aren't shown in a normal `svn log`)
+
+```
+svn log --use-merge-history
+```
+
+`--use-merge-history` can also be used with `svn blame`
+
 List all files:
 
 ```
