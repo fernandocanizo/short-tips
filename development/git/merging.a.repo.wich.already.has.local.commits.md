@@ -13,7 +13,7 @@ Easy!
 
 ```
 git remote add origin <https://github.com/your-new-repo>
-git pull --rebase origin master
+git pull --rebase origin main
 ```
 
 Voilá!
