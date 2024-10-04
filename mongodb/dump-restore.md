@@ -24,3 +24,8 @@ Restore changing the name of the database:
 mongorestore -v --archive=<dumpFile> --nsFrom="oldName.*" --nsTo="newName.*"
 ```
 
+## Rename database
+
+According to [this post](https://jira.mongodb.org/browse/SERVER-701) updated on 2024-04-12, there's no easy way to rename a database in Mongo, so probably they never gonna implement that.
+
+The recommended way is to use the provided tools for dumping/restoring, to make a backup copy an re-load it with a new name.
