@@ -1,0 +1,5 @@
+# Clean cache
+
+```
+yay -Scc
+```
